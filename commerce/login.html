@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="login.css">
+</head>
+<body>
+    <div class="main">
+        <div class="forms">
+            <div class="form login">
+                <span class="title">Giriş</span>
+
+                <form action="">
+                    <div class="input-field">
+                        <input type="text" placeholder="E-Posta adresinizi giriniz">
+                    </div>
+                    <div class="input-field">
+                        <input type="password" class="password" placeholder="Şifrenizi giriniz">
+                    </div>
+                    <div class="checkbox-text">
+                        <div class="checkbox-content">
+                            <input type="checkbox" id="logCheck">
+                            <label for="logCheck" class="text">Beni Hatırla</label>
+                        </div>
+
+                        <a href="#" class="text">Şifreni mi unuttun?</a>
+                    </div>
+
+                    <div class="input-field button">
+                        <input type="button" value="Giriş">
+
+                    </div>
+                </form>
+
+                <div class="login-signup">
+                    <span class="text">
+                        Üye değil misin?
+                        <a href="#" class="text signup-link">Şimdi Üye Ol</a>
+                    </span>
+                </div>
+            </div>
+            <div class="form signup">
+                <span class="title">Kayıt</span>
+
+                <form action="#">
+                    <div class="input-field">
+                        <input type="text" placeholder="Adınızı Giriniz">
+                    </div>
+                    <div class="input-field">
+                        <input type="text" placeholder="E-Posta Adresinizi Giriniz">
+                    </div>
+                    <div class="input-field">
+                        <input type="password" class="password" placeholder="Şifre Oluştur">
+                    </div>
+                    <div class="input-field">
+                        <input type="password" class="password" placeholder="Şifre Onayla">
+                    </div>
+
+                    <div class="checkbox-text">
+                        <div class="checkbox-content">
+                            <input type="checkbox" id="termCon">
+                            <label for="termCon" class="text">Tüm Şartları Kabul Ediyorum.</label>
+                        </div>
+                    </div>
+                    <div class="input-field button">
+                        <input type="button" value="Üye Ol">
+                    </div>
+
+                    <div class="login-signup">
+                        <span class="text">
+                            Zaten Üye misin?
+                            <a href="#" class="text login-link">Giriş Yap</a>
+                        </span>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <script>
+        let main = document.querySelector(".main");
+        let signUp = document.querySelector(".signup-link");
+        let logIn = document.querySelector(".login-link");
+
+        signUp.addEventListener("click", () => {
+            main.classList.add("active");
+        });
+        logIn.addEventListener("click", () => {
+            main.classList.remove("active");
+        })
+    </script>
+</body>
+</html>
